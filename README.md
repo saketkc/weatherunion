@@ -11,6 +11,9 @@ remotes::install_github("saketkc/weatherunion")
 
 ## Usage
 
+See [vignette](https://saket-choudhary.me/weatherunion/articles/Introduction.html) for a details.
+
+
 ```r
 library(weatherunion)
 available_locations() # get a list of available locations
