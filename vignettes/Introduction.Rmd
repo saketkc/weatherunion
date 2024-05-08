@@ -1,0 +1,59 @@
+---
+title: "Introduction to weatherunion"
+output:
+  html_document:
+    theme: united
+    df_print: kable
+  pdf_document: default
+date: 'Compiled: `r Sys.Date()`'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  tidy = TRUE,
+  tidy.opts = list(width.cutoff = 95),
+  warning = FALSE,
+  error = TRUE,
+  message = FALSE,
+  fig.width = 8,
+  time_it = TRUE
+)
+```
+
+# Introduction
+
+We can list down all available locations using `available_locations`:
+
+```{r}
+library(magrittr)
+library(weatherunion)
+DT::datatable(data = available_locations())
+```
+
+And simply fetch the weather data of a location using `get_weather`:
+
+```{r}
+mumbai <- available_locations() %>% dplyr::filter(cityName == "Mumbai")
+DT::datatable(data = mumbai)
+```
+
+```{r}
+api_key <- Sys.getenv("ZOMATO_API_KEY")
+DT::datatable(data = get_weather(api_key = api_key, latitude = mumbai$latitude[1], longitude = mumbai$longitude[1]))
+```
+
+Get all locations at once:
+
+```{r}
+result <- apply(mumbai, 1, function(row) get_weather(api_key = api_key, latitude = row[4], longitude = row[5]))
+result.combined <- dplyr::bind_rows(result)
+result.joined <- cbind(mumbai, result.combined %>% dplyr::select(-device_type, -latitude, -longitude))
+DT::datatable(data = result.joined %>% dplyr::arrange(desc(temperature)))
+```
+
+<details>
+  <summary>**Session Info**</summary>
+```{r}
+sessionInfo()
+```
+</details>

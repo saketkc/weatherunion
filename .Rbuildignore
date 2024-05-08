@@ -1,0 +1,13 @@
+^renv$
+^renv\.lock$
+^.*\.Rproj$
+^\.Rproj\.user$
+^.*\.old$
+.git
+^_pkgdown\.yaml$
+^docs$
+^pkgdown$
+^index\.md$
+^vignettes$
+^LICENSE\.md$
+^_pkgdown\.yml$
