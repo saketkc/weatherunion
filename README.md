@@ -44,3 +44,6 @@ weather <- get_weather(api_key = api_key, latitude = 19.27813, longitude = 72.87
   device_type status message
 1           1    200
 ```
+
+![image](https://github.com/saketkc/weatherunion/assets/682153/af030b65-4a84-4639-8bf1-f51a78e9d18c)
+
