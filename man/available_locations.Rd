@@ -2,13 +2,18 @@
 % Please edit documentation in R/api.R
 \name{available_locations}
 \alias{available_locations}
-\title{Get list of localities supported by Zomato}
+\title{List Weather Union localities}
 \usage{
 available_locations()
 }
 \value{
-A list of locations with latitudes and longitudes
+A data frame with columns \code{cityName}, \code{localityName}, \code{localityId},
+\code{latitude}, \code{longitude} and \code{device_type}.
 }
 \description{
-Get list of localities supported by Zomato
+Reads the bundled catalog. Works offline.
+}
+\examples{
+head(available_locations())
+
 }

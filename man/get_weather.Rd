@@ -2,22 +2,35 @@
 % Please edit documentation in R/api.R
 \name{get_weather}
 \alias{get_weather}
-\title{Get current weather at a particular latitude and longitude}
+\title{Get current weather at a location}
 \usage{
 get_weather(api_key, latitude, longitude)
 }
 \arguments{
-\item{api_key}{API key}
+\item{api_key}{API key.}
 
-\item{latitude}{Latitude}
+\item{latitude}{Latitude.}
 
-\item{longitude}{Longitude}
+\item{longitude}{Longitude.}
 }
 \value{
-A dataframe with current weather statistics
-including: temperature, humidity, wind_speed, wind_direction
-rain_intensity rain_accumulation latitude
+A one-row data frame with numeric readings (\code{temperature},
+\code{humidity}, \code{wind_speed}, \code{wind_direction}, \code{rain_intensity},
+\code{rain_accumulation} and others), plus \code{latitude}, \code{longitude}, \code{device_type},
+\code{status} and \code{message}. Missing readings are \code{NA}. \code{message} can report an
+outage, such as \code{"temporarily unavailable"}.
 }
 \description{
-Get current weather at a particular latitude and longitude
+Needs an API key from \url{https://www.weatherunion.com/}. Rejected requests
+raise an error with the API's message.
+}
+\examples{
+\dontrun{
+get_weather(
+  api_key = Sys.getenv("ZOMATO_API_KEY"),
+  latitude = 19.27813,
+  longitude = 72.87472
+)
+}
+
 }

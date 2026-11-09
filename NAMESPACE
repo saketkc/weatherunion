@@ -4,11 +4,15 @@ export("%>%")
 export(available_locations)
 export(get_weather)
 export(path_to_file)
-importFrom(httr2,req_headers)
-importFrom(httr2,req_perform)
-importFrom(httr2,req_url_path_append)
-importFrom(httr2,req_url_query)
-importFrom(httr2,request)
-importFrom(httr2,resp_body_json)
+importFrom(httr2,
+  req_error,
+  req_headers,
+  req_perform,
+  req_url_path_append,
+  req_url_query,
+  request,
+  resp_body_json
+)
+importFrom(jsonlite,fromJSON)
 importFrom(magrittr,"%>%")
 importFrom(utils,read.csv)

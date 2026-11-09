@@ -1,6 +1,6 @@
 # weatherunion
 
-R package to fetch temperature, wind soeed, precipitation and related information from Zomato's [weatherunion.com](https://www.weatherunion.com/) API.
+R package to fetch temperature, wind speed, precipitation and related information from Zomato's [weatherunion.com](https://www.weatherunion.com/) API.
 
 
 ## Installation
@@ -11,7 +11,7 @@ remotes::install_github("saketkc/weatherunion")
 
 ## Usage
 
-See [vignette](https://saket-choudhary.me/weatherunion/articles/Introduction.html) for a details.
+See [vignette](https://saket-choudhary.me/weatherunion/articles/Introduction.html) for details.
 
 
 ```r

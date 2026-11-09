@@ -2,26 +2,25 @@
 % Please edit documentation in R/path-to-file.R
 \name{path_to_file}
 \alias{path_to_file}
-\title{Get file path to `zomato_locations.csv` file}
+\title{Get the path to a bundled file}
 \source{
-This function is adapted from `readxl::readxl_example()`.
+This function is adapted from \code{readxl::readxl_example()}.
 }
 \usage{
 path_to_file(path = NULL)
 }
 \arguments{
-\item{path}{Name of file in quotes with extension;
-`"zomato_locations.csv"` will work.
-If `NULL`, the example files will be listed.}
+\item{path}{File name with extension, such as \code{"zomato_locations.csv"}.}
+}
+\value{
+The full path to \code{path}, or the bundled file names if \code{path} is
+\code{NULL}.
 }
 \description{
-weatherunion comes bundled with a csv file in `inst/extdata`
-directory. This function make them easy to access.
+Get the path to a bundled file
 }
 \examples{
-\dontrun{
 path_to_file()
 path_to_file("zomato_locations.csv")
 head(read.csv(path_to_file("zomato_locations.csv")))
-}
 }

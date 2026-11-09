@@ -3,7 +3,8 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^.*\.old$
-.git
+^\.git$
+^\.gitignore$
 ^_pkgdown\.yaml$
 ^docs$
 ^pkgdown$
@@ -11,3 +12,7 @@
 ^vignettes$
 ^LICENSE\.md$
 ^_pkgdown\.yml$
+^\.env$
+^\.claude$
+^CLAUDE\.md$
+^cran-comments\.md$

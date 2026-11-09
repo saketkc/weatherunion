@@ -3,29 +3,28 @@
 \docType{data}
 \name{zomato_locations}
 \alias{zomato_locations}
-\title{Zomato locations data}
+\title{Weather Union localities}
 \format{
-## `zomato_locations`
-A data frame with 7,240 rows and 60 columns:
+\subsection{\code{zomato_locations}}{
+
+A data frame with 580 rows and 6 columns:
 \describe{
-  \item{country}{Country name}
-  \item{cityName}{City}
-  \item{localityName}{locality}
-  \item{localityId}{Location ID}
-  \item{latitude}{Latitude}
-  \item{longitude}{Longitude}
-  \item{device_type}{Device type}
-  ...
+\item{cityName}{City}
+\item{localityName}{Locality}
+\item{localityId}{Location ID}
+\item{latitude}{Latitude}
+\item{longitude}{Longitude}
+\item{device_type}{Device type}
+}
 }
 }
 \source{
-<https://b.zmtcdn.com/data/file_assets/65fa362da3aa560a92f0b8aeec0dfda31713163042.pdf>
+\url{https://b.zmtcdn.com/data/file_assets/65fa362da3aa560a92f0b8aeec0dfda31713163042.pdf}
 }
 \usage{
 zomato_locations
 }
 \description{
-List of localities supported by Zomato
-Report ...
+The catalog returned by \code{\link[=available_locations]{available_locations()}}.
 }
 \keyword{datasets}
